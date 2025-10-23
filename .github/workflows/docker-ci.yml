@@ -2,9 +2,9 @@ name: Build and Push Docker Image
  
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
   pull_request:
+    branches: ["main"]
  
 jobs:
   build:
@@ -34,4 +34,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           annotations: ${{ steps.meta.outputs.annotations }}
           provenance: true
-          sbom: true
+          sbom: true
